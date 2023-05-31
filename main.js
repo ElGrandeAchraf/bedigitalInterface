@@ -70,8 +70,8 @@ const locationIcon = document.querySelector('.fa-solid.fa-map-location-dot');
 
 locationIcon.addEventListener('click', function () {
   const newContent = '<ul>' +
-    '<li><a href="#"><img src="../images/googlemaps.png" alt="waze"></a></li>' +
-    '<li><a href="#"><img src="../images/waze.png" alt="waze"></a></li>' +
+    '<li><a href="#"><img src="googlemaps.png" alt="waze"></a></li>' +
+    '<li><a href="#"><img src="waze.png" alt="waze"></a></li>' +
     '</ul>';
 
   const backButton = document.createElement('li');
