@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <title>Bedigital</title>
     </head>
     <body class="antialiased">
             <header>
                 <div class="navbar">
-                    <div class="logo"><a href="#"><img src="./logo.png" alt="logo"></a></div>
+                    <div class="logo"><a href="#"><img src="{{ asset("/images/logo.png") }}" alt="logo"></a></div>
                     <ul class="links">
                         <li><a href="/">Home</a></li>
                         <li><a href="#service">Services</a></li>
@@ -24,12 +24,22 @@
                 </div>
 
                 <div class="dropdown_menu">
-                    <li>
-                        <a href="https://www.google.com/maps/place/Station+Shell+M'diq/@35.6820268,-5.3252326,14.83z/data=!4m6!3m5!1s0xd0b5c71e083371f:0xbf0992f867161375!8m2!3d35.682072!4d-5.320532!16s%2Fg%2F11c54f8fjy?entry=ttu"><img src="./googlemaps.png" alt="GoogleMap"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./waze.png" alt="waze"></a>
-                    </li>
+                    <div class="linksMenu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#service">Services</a></li>
+                            <li><a href="#">Academy</a></li>
+                            <li><a href="#about">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="socialMediaMenu">
+                        <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><i class="fa-solid fa-map-location-dot"></i></li>
+                        </ul>
+                    </div>
                 </div>
             </header>
 
@@ -142,7 +152,7 @@
             </main>
             <footer>
                 <div class="footer-content">
-                    <img src="./logo.png" alt="Bedigital Logo">
+                    <img src="{{ asset('/images/logo.png') }}" alt="Bedigital Logo">
                     <p>Our agency BEDIGITAL provides all the expertise you need to improve your digital marketing, ensuring you achieve fruitful results and offer the best experience to your customers.</p>
                     <ul class="socials">
                         <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
@@ -155,6 +165,6 @@
                 </div>
         
             </footer>
-    <script src="./main.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>

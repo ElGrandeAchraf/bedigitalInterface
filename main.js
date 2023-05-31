@@ -1,19 +1,24 @@
 /* Toggle btn */
 
-const toggleBtn = document.querySelector('.toggle_btn')
-const toggleBtnIcon = document.querySelector('.toggle_btn i')
-const dropDownMenu = document.querySelector('.dropdown_menu')
+const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtnIcon = document.querySelector('.toggle_btn i');
+const dropDownMenu = document.querySelector('.dropdown_menu');
 
 toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open')
+  dropDownMenu.classList.toggle('open');
+  const isOpen = dropDownMenu.classList.contains('open');
+  toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+};
 
-    const isOpen = dropDownMenu.classList.contains('open')
+// Close the dropdown menu when a link is clicked
+const links = document.querySelectorAll('.linksMenu a');
+links.forEach((link) => {
+  link.addEventListener('click', function () {
+    dropDownMenu.classList.remove('open');
+    toggleBtnIcon.classList = 'fa-solid fa-bars';
+  });
+});
 
-    toggleBtnIcon.classList = isOpen
-    ? 'fa-solid fa-xmark'
-    : 'fa-solid fa-bars'
-
-}
 
 /* End of Toggle Btn */
 
@@ -56,3 +61,30 @@ function typeSentence() {
   // Call the function initially
   typeSentence();
 /* End of Animated Text */
+
+/* Change Navbar to Icons Map */
+const linksMenu = document.querySelector('.linksMenu');
+const originalContent = linksMenu.innerHTML;
+const socialMediaMenu = document.querySelector('.socialMediaMenu');
+const locationIcon = document.querySelector('.fa-solid.fa-map-location-dot');
+
+locationIcon.addEventListener('click', function () {
+  const newContent = '<ul>' +
+    '<li><a href="#"><img src="../images/googlemaps.png" alt="waze"></a></li>' +
+    '<li><a href="#"><img src="../images/waze.png" alt="waze"></a></li>' +
+    '</ul>';
+
+  const backButton = document.createElement('li');
+  backButton.innerHTML = '<a href="#"><i class="fa-solid fa-arrow-left"></i> Back</a>';
+
+  backButton.addEventListener('click', function () {
+    linksMenu.innerHTML = originalContent;
+    socialMediaMenu.style.display = 'block';
+  });
+
+  linksMenu.innerHTML = newContent;
+  socialMediaMenu.style.display = 'none';
+  linksMenu.insertBefore(backButton, linksMenu.firstChild);
+});
+
+/* End */

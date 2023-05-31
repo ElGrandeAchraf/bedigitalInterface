@@ -111,7 +111,7 @@ right: 2rem;
 height: 0;
 top: 60px;
 width: 300px;
-background: rgba(0, 163, 226, 0.1);
+background: rgba(2, 71, 99, 0.1);
 backdrop-filter: blur(15px);
 border-radius: 10px;
 overflow: hidden;
@@ -121,21 +121,50 @@ transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 .dropdown_menu.open{
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
 }
 
-.dropdown_menu li{
+.linksMenu li{
   padding: 0.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.linksMenu li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.linksMenu li a:hover{
+    color: #343e5b;
+}
+
 .dropdown_menu li img{
   width: 50px;
 }
+
+.socialMediaMenu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.socialMediaMenu ul li {
+    margin: 1rem;
+}
+
+.socialMediaMenu ul li a:hover {
+    color: #343e5b;
+}
+
+.socialMediaMenu ul li i {
+    font-size: 1.5rem;
+}
+
 
 /* Hero */
 section#hero {
@@ -282,7 +311,7 @@ section#service {
     
     .wrap {
       display: flex;
-      justify: space-between;
+      justify-content: space-between;
       align-items: stretch;
       width: 100%;
       gap: 24px;
@@ -623,6 +652,9 @@ text-decoration: none;
 }
 
 @media (min-width: 460px) {
+    .box {
+        flex-basis: 48%;
+      }
   .title-flex {
     display: flex;
     flex-direction: row;
@@ -635,7 +667,10 @@ text-decoration: none;
 }
 
 @media (min-width: 640px) {
-  
+    .box {
+        flex-basis: 48%;
+      }
+
   .title-flex {
     display: flex;
     flex-direction: column;
@@ -648,6 +683,10 @@ text-decoration: none;
 }
 
 @media (min-width: 840px) {
+    .box {
+        flex-basis: 48%;
+      }
+
   .title-flex {
     display: flex;
     flex-direction: row;
@@ -676,6 +715,6 @@ text-decoration: none;
 
 @media (min-width: 1100px) {
   .box {
-    flex-basis: calc(25% - 18px);
+    flex-basis: 48%;
   }
 }
