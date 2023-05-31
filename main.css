@@ -60,10 +60,8 @@ header {
   justify-content: space-between;
 }
 
-.navbar .logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
+.navbar .logo a img {
+  width: 70px;
 }
 
 .navbar .links {
@@ -546,6 +544,11 @@ text-decoration: none;
 
 /* Responsive Design */
 @media (max-width:992px) {
+
+  .navbar .logo a img {
+    width: 50px;
+  }
+
   .navbar .links,
   .navbar .action_btn {
       display: none;
